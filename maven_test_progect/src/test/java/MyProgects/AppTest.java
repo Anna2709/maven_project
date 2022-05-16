@@ -64,4 +64,20 @@ public class AppTest
         int result = App.countStringsWithUniqueCharacters(array);
         assertEquals(2, result, "Result is incorrect for array: " + Arrays.toString(array));
     }
+
+    @Test
+    void sumElementsOnEvenPositions() {
+        int[] array = {1, -2, 2, 3, 1, -5, -10};
+        int result = App.sumElementsOnEvenPositions(array);
+        assertEquals(-6, result, "Result is incorrect for array: " + Arrays.toString(array));
+    }
+
+    @Test
+    void replaceNegativeElementsByZero() {
+        int[] originalArray = {1, -2, 0, 3, 1, -5, -10};
+        int[] array = Arrays.copyOf(originalArray, originalArray.length);
+        App.replaceNegativeElementsByZero(array);
+        int[] expected = {1, 0, 0, 3, 1, 0, 0};
+        assertArrayEquals(expected, array, "Result is incorrect for array: " + Arrays.toString(originalArray));
+    }
 }

@@ -108,4 +108,22 @@ public class App
         }
         return result;
     }
+
+    public static int sumElementsOnEvenPositions(int[] array) {
+        int evenSum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (i % 2 == 0) {
+                evenSum += array[i];
+            }
+        }
+        return evenSum;
+    }
+
+    public static void replaceNegativeElementsByZero(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 0) {
+                array[i] = 0;
+            }
+        }
+    }
 }
