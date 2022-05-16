@@ -95,4 +95,11 @@ public class AppTest
         int[] expected3 = {0, 1};
         assertArrayEquals(expected3, array3, "Incorrectly generated Fibonacci numbers for x = 0");
     }
+
+    @Test
+    void generatePrimeNumbers() {
+        int[] array = App.generatePrimeNumbers(10);
+        int[] expected = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
+        assertArrayEquals(expected, array, "Incorrectly generated prime numbers");
+    }
 }

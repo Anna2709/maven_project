@@ -141,4 +141,24 @@ public class App
         // System.out.println(Arrays.toString(array));
         return array;
     }
+
+    public static int[] generatePrimeNumbers(int count) {
+        int counter = 0;
+        int[] array = new int[count];
+        for (int i = 2; counter <= count - 1; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                array[counter] = i;
+                counter++;
+            }
+
+        }
+        return array;
+    }
 }
