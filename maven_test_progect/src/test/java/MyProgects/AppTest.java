@@ -80,4 +80,19 @@ public class AppTest
         int[] expected = {1, 0, 0, 3, 1, 0, 0};
         assertArrayEquals(expected, array, "Result is incorrect for array: " + Arrays.toString(originalArray));
     }
+
+    @Test
+    void generateFibonacciNumbers() {
+        int[] array1 = App.generateFibonacciNumbers(14);
+        int[] expected1 = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233};
+        assertArrayEquals(expected1, array1, "Incorrectly generated Fibonacci numbers for x = 14");
+
+        int[] array2 = App.generateFibonacciNumbers(1);
+        int[] expected2 = {0};
+        assertArrayEquals(expected2, array2, "Incorrectly generated Fibonacci numbers for x = 0");
+
+        int[] array3 = App.generateFibonacciNumbers(2);
+        int[] expected3 = {0, 1};
+        assertArrayEquals(expected3, array3, "Incorrectly generated Fibonacci numbers for x = 0");
+    }
 }
